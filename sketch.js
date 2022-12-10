@@ -31,6 +31,7 @@ function draw() {
 
   for (let i = 0; i < sky.length; i++) {
     let record = width/12;
+    if (record < 200) { record = 200; }
 
     for (let j = 1; j < sky.length - 1; j++) {
 
@@ -55,7 +56,7 @@ function draw() {
 
   }
 
-  for (let n = 0; n < random(100) + 100; n++) {
+  for (let n = 0; n < (width+height)/2 * 0.05; n++) {
     let tooClose = false;
     let p = createVector(
       random(width),
